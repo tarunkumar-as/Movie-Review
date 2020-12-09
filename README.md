@@ -1,2 +1,2 @@
 # Movie-Review
-A Java application that allows users and movie critiques to review movies
+A Java Swing Application that allows users and movie critiques to review movies
