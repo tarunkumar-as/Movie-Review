@@ -61,6 +61,7 @@ public class SQLConnector {
             stmt.executeUpdate(sql);
             return true;
         } catch (SQLException ignored) {
+            System.out.println(ignored);
             return false;
         }
     }
@@ -71,6 +72,7 @@ public class SQLConnector {
             stmt.executeUpdate(sql);
             return true;
         } catch (SQLException ignored) {
+            System.out.println(ignored);
             return false;
         }
     }
@@ -81,6 +83,7 @@ public class SQLConnector {
             stmt.executeUpdate(sql);
             return true;
         } catch (SQLException ignored) {
+            System.out.println(ignored);
             return false;
         }
     }

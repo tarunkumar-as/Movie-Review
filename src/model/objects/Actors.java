@@ -8,7 +8,6 @@ public class Actors {
     private String name;
     private String photo_url;
     private char sex;
-    private List<Movies> moviesList;
 
     public int getActor_id() {
         return actor_id;
@@ -40,13 +39,5 @@ public class Actors {
 
     public void setSex(char sex) {
         this.sex = sex;
-    }
-
-    public List<Movies> getMoviesList() {
-        return moviesList;
-    }
-
-    public void setMoviesList(List<Movies> moviesList) {
-        this.moviesList = moviesList;
     }
 }

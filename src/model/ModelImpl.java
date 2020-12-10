@@ -1,11 +1,14 @@
 package model;
 
 import model.crud.*;
+import model.objects.Actors;
+import model.objects.Movies;
 import model.objects.UserDetail;
 import model.objects.Users;
 
 import java.sql.Date;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ModelImpl implements IModel {
@@ -69,6 +72,48 @@ public class ModelImpl implements IModel {
         userDetailCRUD.delete(deleteUser);
     }
 
+    // ACTORS TABLE
+    public void createActor(Actors newUser) {
+        actorsCRUD.create(newUser);
+    }
+
+    public List<Actors> fetchActor(String query) {
+        return actorsCRUD.read(query);
+    }
+
+    public List<Actors> fetchAllActors() {
+        return actorsCRUD.read(null);
+    }
+
+    public void updateActor(Actors oldUser, Actors newUser) {
+        actorsCRUD.update(oldUser, newUser);
+    }
+
+    public void deleteActor(Actors deleteUser) {
+        actorsCRUD.delete(deleteUser);
+    }
+
+    // MOVIES TABLE
+    public void createMovie(Movies newMovie) {
+        moviesCRUD.create(newMovie);
+    }
+
+    public List<Movies> fetchMovie(String query) {
+        return moviesCRUD.read(query);
+    }
+
+    public List<Movies> fetchAllMovies() {
+        return moviesCRUD.read(null);
+    }
+
+    public void updateMovie(Movies oldMovie, Movies newMovie) {
+        moviesCRUD.update(oldMovie, newMovie);
+    }
+
+    public void deleteMovie(Movies deleteMovie) {
+        moviesCRUD.delete(deleteMovie);
+    }
+
     public static void main(String[] args) {
         ModelImpl impl = new ModelImpl();
 //        UserDetail olduserDetail = new UserDetail();
@@ -84,5 +129,29 @@ public class ModelImpl implements IModel {
 //        impl.fetchAllUserDetails();
 //        impl.updateUserDetail(olduserDetail, userDetail);
 //        impl.deleteUserDetail(olduserDetail);
+
+        Actors actors = new Actors();
+        actors.setActor_id(2);
+        Actors oldactors = new Actors();
+        oldactors.setActor_id(1);
+//        actors.setSex('M');
+//        actors.setName("123");
+//        actors.setPhoto_url("asdfGoogle.com");
+//        impl.createActor(actors);
+//        impl.fetchAllActors();
+//        impl.updateActor(oldactors, actors);
+//        impl.deleteActor(oldactors);
+
+//        Movies movies = new Movies();
+//        movies.setMovie_Id(2);
+//        movies.setMovie_name("TEstmovie");
+//        movies.setPhoto_url("movie_url");
+//        movies.setDuration(90);
+//        movies.setCertification("U");
+//        movies.setActorsList(new ArrayList<>(List.of(oldactors, actors)));
+
+//        impl.createMovie(movies);
+//        impl.updateMovie(movies,movies);
+        impl.fetchAllMovies();
     }
 }
