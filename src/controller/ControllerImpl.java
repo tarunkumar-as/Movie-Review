@@ -34,6 +34,15 @@ public class ControllerImpl implements IController {
                 case MAINMENU:
                     this.currentModule = new MainModule(view, model, this);
                     break;
+                case MOVIE_MAIN:
+                    this.currentModule = new MovieModule(view, model, this);
+                    break;
+                case USERS_MAIN:
+                    this.currentModule = new UsersModule(view, model, this);
+                    break;
+                case PROFILE:
+                    this.currentModule = new ProfileModule(view, model, this);
+                    break;
                 case WELCOME:
                 default:
                     this.currentModule = new WelcomeModule(view, model, this);
