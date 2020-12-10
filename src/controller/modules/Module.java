@@ -7,6 +7,8 @@ public enum Module {
     SIGNUP,
     MAINMENU,
     MOVIE_MAIN,
+    MOVIE_DETAIL,
+    ACTORS,
     USERS_MAIN,
     PROFILE
 }

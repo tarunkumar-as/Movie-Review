@@ -3,6 +3,7 @@ package controller;
 import controller.modules.*;
 import controller.modules.Module;
 import model.ModelImpl;
+import model.objects.Movies;
 import model.objects.Users;
 import view.IView;
 
@@ -14,6 +15,7 @@ public class ControllerImpl implements IController {
     private IModule currentModule;
 
     private Users currentUser;
+    private Movies selectedMovie;
 
     public ControllerImpl(IView view, ModelImpl model) {
         this.view = view;
@@ -36,6 +38,12 @@ public class ControllerImpl implements IController {
                     break;
                 case MOVIE_MAIN:
                     this.currentModule = new MovieModule(view, model, this);
+                    break;
+                case MOVIE_DETAIL:
+                    this.currentModule = new MovieDetail(view, model, this);
+                    break;
+                case ACTORS:
+                    this.currentModule = new ActorsModule(view, model, this);
                     break;
                 case USERS_MAIN:
                     this.currentModule = new UsersModule(view, model, this);
@@ -60,5 +68,15 @@ public class ControllerImpl implements IController {
     public void setCurrentUser(Users currentUser) {
         this.currentUser = currentUser;
 
+    }
+
+    @Override
+    public Movies getSelectedMovie() {
+        return selectedMovie;
+    }
+
+    @Override
+    public void setSelectedMovie(Movies movie) {
+        selectedMovie = movie;
     }
 }

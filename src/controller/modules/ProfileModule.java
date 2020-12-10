@@ -24,6 +24,8 @@ public class ProfileModule extends AbstractModule implements IModule {
         while(true) {
             String displayText =
                     "-----------------------\n" +
+                    "| SELECT AN OPTION    |\n" +
+                    "-----------------------\n" +
                     "| 1 - View Profile    |\n" +
                     "| 2 - Update Profile  |\n" +
                     "| X - Delete Account  |\n" +
