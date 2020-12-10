@@ -31,6 +31,8 @@ public class MainModule extends AbstractModule implements IModule {
                     "-----------------------\n" +
                     "| M - Movie           |\n" +
                     "| P - Profile         |\n" +
+                    "| S - Sign Out        |\n" +
+                    "| Q - Quit           |\n" +
                     "-----------------------";
             view.echoOutput(displayText);
             String input = view.getInput();
@@ -41,6 +43,25 @@ public class MainModule extends AbstractModule implements IModule {
                 case "P":
                 case "p":
                     return Module.PROFILE;
+                case "S":
+                case "s":
+                    view.echoOutput("Are you sure you want to sign out?(y/n)");
+                    if (view.getInput().equalsIgnoreCase("y")) {
+                        controller.setCurrentUser(null);
+                        return Module.WELCOME;
+                    }
+                    else {
+                        return Module.MAINMENU;
+                    }
+                case "q":
+                case "Q":
+                    view.echoOutput("Are you sure you want to quit?(y/n)");
+                    if (view.getInput().equalsIgnoreCase("y")) {
+                        System.exit(0);
+                    }
+                    else {
+                        return Module.MAINMENU;
+                    }
                 default:
                     view.echoOutput("Invalid Input. Enter valid input\n");
             }
@@ -56,6 +77,8 @@ public class MainModule extends AbstractModule implements IModule {
                     "| M - Movie           |\n" +
                     "| U - Users           |\n" +
                     "| P - Profile         |\n" +
+                    "| S - Sign Out        |\n" +
+                    "| Q - Quit           |\n" +
                     "-----------------------";
             view.echoOutput(displayText);
             String input = view.getInput();
@@ -69,6 +92,25 @@ public class MainModule extends AbstractModule implements IModule {
                 case "P":
                 case "p":
                     return Module.PROFILE;
+                case "S":
+                case "s":
+                    view.echoOutput("Are you sure you want to sign out?(y/n)");
+                    if (view.getInput().equalsIgnoreCase("y")) {
+                        controller.setCurrentUser(null);
+                        return Module.WELCOME;
+                    }
+                    else {
+                        return Module.MAINMENU;
+                    }
+                case "q":
+                case "Q":
+                    view.echoOutput("Are you sure you want to quit?(y/n)");
+                    if (view.getInput().equalsIgnoreCase("y")) {
+                        System.exit(0);
+                    }
+                    else {
+                        return Module.MAINMENU;
+                    }
                 default:
                     view.echoOutput("Invalid Input. Enter valid input\n");
             }
@@ -84,6 +126,8 @@ public class MainModule extends AbstractModule implements IModule {
                     "| M - Movie           |\n" +
                     "| U - Users           |\n" +
                     "| P - Profile         |\n" +
+                    "| S - Sign Out        |\n" +
+                    "| Q - Quit           |\n" +
                     "-----------------------";
             view.echoOutput(displayText);
             String input = view.getInput();
@@ -97,6 +141,25 @@ public class MainModule extends AbstractModule implements IModule {
                 case "P":
                 case "p":
                     return Module.PROFILE;
+                case "S":
+                case "s":
+                    view.echoOutput("Are you sure you want to sign out?(y/n)");
+                    if (view.getInput().equalsIgnoreCase("y")) {
+                        controller.setCurrentUser(null);
+                        return Module.WELCOME;
+                    }
+                    else {
+                        return Module.MAINMENU;
+                    }
+                case "q":
+                case "Q":
+                    view.echoOutput("Are you sure you want to quit?(y/n)");
+                    if (view.getInput().equalsIgnoreCase("y")) {
+                        System.exit(0);
+                    }
+                    else {
+                        return Module.MAINMENU;
+                    }
                 default:
                     view.echoOutput("Invalid Input. Enter valid input\n");
             }
