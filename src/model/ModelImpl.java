@@ -1,10 +1,7 @@
 package model;
 
 import model.crud.*;
-import model.objects.Actors;
-import model.objects.Movies;
-import model.objects.UserDetail;
-import model.objects.Users;
+import model.objects.*;
 
 import java.sql.Date;
 import java.sql.SQLException;
@@ -114,8 +111,79 @@ public class ModelImpl implements IModel {
         moviesCRUD.delete(deleteMovie);
     }
 
+    // MOVIESLIKE TABLE
+    public void createMovieLike(MovieLike newMovie) {
+        movieLikeCRUD.create(newMovie);
+    }
+
+    public List<MovieLike> fetchMovieLike(String query) {
+        return movieLikeCRUD.read(query);
+    }
+
+    public List<MovieLike> fetchAllMovieLikes() {
+        return movieLikeCRUD.read(null);
+    }
+
+    public void updateMovieLike(MovieLike oldMovie, MovieLike newMovie) {
+        movieLikeCRUD.update(oldMovie, newMovie);
+    }
+
+    public void deleteMovieLike(MovieLike deleteMovie) {
+        movieLikeCRUD.delete(deleteMovie);
+    }
+
+    // REVIEWS TABLE
+    public void createReview(Reviews newReview) {
+        reviewsCRUD.create(newReview);
+    }
+
+    public List<Reviews> fetchReview(String query) {
+        return reviewsCRUD.read(query);
+    }
+
+    public List<Reviews> fetchAllReviews() {
+        return reviewsCRUD.read(null);
+    }
+
+    public void updateReview(Reviews oldReview, Reviews newReview) {
+        reviewsCRUD.update(oldReview, newReview);
+    }
+
+    public void deleteReview(Reviews deleteReview) {
+        reviewsCRUD.delete(deleteReview);
+    }
+
+    // REVIEWSLIKE TABLE
+    public void createReviewLike(ReviewLike newReview) {
+        reviewLikeCRUD.create(newReview);
+    }
+
+    public List<ReviewLike> fetchReviewLike(String query) {
+        return reviewLikeCRUD.read(query);
+    }
+
+    public List<ReviewLike> fetchAllReviewLikes() {
+        return reviewLikeCRUD.read(null);
+    }
+
+    public void updateReviewLike(ReviewLike oldReview, ReviewLike newReview) {
+        reviewLikeCRUD.update(oldReview, newReview);
+    }
+
+    public void deleteReviewLike(ReviewLike deleteReview) {
+        reviewLikeCRUD.delete(deleteReview);
+    }
+
     public static void main(String[] args) {
         ModelImpl impl = new ModelImpl();
+
+//        Users users = new Users();
+//        users.setUserName("Tarun");
+//        users.setPassword("Tarun");
+//        users.setRole("Admin");
+//        users.setVerified(true);
+//        impl.createUser(users);
+
 //        UserDetail olduserDetail = new UserDetail();
 //        olduserDetail.setUser_id(1);
 //        UserDetail userDetail = new UserDetail();
@@ -130,10 +198,10 @@ public class ModelImpl implements IModel {
 //        impl.updateUserDetail(olduserDetail, userDetail);
 //        impl.deleteUserDetail(olduserDetail);
 
-        Actors actors = new Actors();
-        actors.setActor_id(2);
-        Actors oldactors = new Actors();
-        oldactors.setActor_id(1);
+//        Actors actors = new Actors();
+//        actors.setActor_id(2);
+//        Actors oldactors = new Actors();
+//        oldactors.setActor_id(1);
 //        actors.setSex('M');
 //        actors.setName("123");
 //        actors.setPhoto_url("asdfGoogle.com");
@@ -149,9 +217,39 @@ public class ModelImpl implements IModel {
 //        movies.setDuration(90);
 //        movies.setCertification("U");
 //        movies.setActorsList(new ArrayList<>(List.of(oldactors, actors)));
-
+//
 //        impl.createMovie(movies);
 //        impl.updateMovie(movies,movies);
-        impl.fetchAllMovies();
+//        impl.fetchAllMovies();
+
+//        Reviews reviews = new Reviews();
+//        reviews.setReview_id(1);
+//        reviews.setDate(Date.valueOf("1991-10-02"));
+//        reviews.setComment("Very Good");
+//        reviews.setUser_id(1);
+//        reviews.setMovie_id(2);
+//
+//        impl.createReview(reviews);
+//        impl.fetchAllReviews();
+//        impl.updateReview(reviews, reviews);
+//        impl.deleteReview(reviews);
+
+//        ReviewLike reviewLike = new ReviewLike();
+//        reviewLike.setUser_id(1);
+//        reviewLike.setReview_id(2);
+//        reviewLike.setUp_down_vote(-1);
+//        impl.createReviewLike(reviewLike);
+//        impl.fetchAllReviewLikes();
+//        impl.updateReviewLike(reviewLike, reviewLike);
+//        impl.deleteReviewLike(reviewLike);
+
+//        MovieLike movieLike = new MovieLike();
+//        movieLike.setUser_id(1);
+//        movieLike.setMovie_id(2);
+//        movieLike.setUp_down_vote(2);
+//        impl.createMovieLike(movieLike);
+//        impl.fetchAllMovieLikes();
+//        impl.updateMovieLike(movieLike, movieLike);
+//        impl.deleteMovieLike(movieLike);
     }
 }
