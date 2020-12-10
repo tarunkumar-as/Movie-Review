@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ModelImpl implements IModel {
+public class ModelImpl {
 
     private final ActorsCRUD actorsCRUD = new ActorsCRUD();
     private final MovieLikeCRUD movieLikeCRUD = new MovieLikeCRUD();
@@ -28,8 +28,8 @@ public class ModelImpl implements IModel {
     }
 
     // USERS TABLE
-    public void createUser(Users newUser) {
-        usersCRUD.create(newUser);
+    public boolean createUser(Users newUser) {
+        return usersCRUD.create(newUser);
     }
 
     public List<Users> fetchUser(String query) {
@@ -40,17 +40,17 @@ public class ModelImpl implements IModel {
         return usersCRUD.read(null);
     }
 
-    public void updateUser(Users oldUser, Users newUser) {
-        usersCRUD.update(oldUser, newUser);
+    public boolean updateUser(Users oldUser, Users newUser) {
+        return usersCRUD.update(oldUser, newUser);
     }
 
-    public void deleteUser(Users deleteUser) {
-        usersCRUD.delete(deleteUser);
+    public boolean deleteUser(Users deleteUser) {
+        return usersCRUD.delete(deleteUser);
     }
 
     // USERDETAIL TABLE
-    public void createUserDetail(UserDetail newUser) {
-        userDetailCRUD.create(newUser);
+    public boolean createUserDetail(UserDetail newUser) {
+        return userDetailCRUD.create(newUser);
     }
 
     public List<UserDetail> fetchUserDetail(String query) {
@@ -61,17 +61,17 @@ public class ModelImpl implements IModel {
         return userDetailCRUD.read(null);
     }
 
-    public void updateUserDetail(UserDetail oldUser, UserDetail newUser) {
-        userDetailCRUD.update(oldUser, newUser);
+    public boolean updateUserDetail(UserDetail oldUser, UserDetail newUser) {
+        return userDetailCRUD.update(oldUser, newUser);
     }
 
-    public void deleteUserDetail(UserDetail deleteUser) {
-        userDetailCRUD.delete(deleteUser);
+    public boolean deleteUserDetail(UserDetail deleteUser) {
+        return userDetailCRUD.delete(deleteUser);
     }
 
     // ACTORS TABLE
-    public void createActor(Actors newUser) {
-        actorsCRUD.create(newUser);
+    public boolean createActor(Actors newUser) {
+        return actorsCRUD.create(newUser);
     }
 
     public List<Actors> fetchActor(String query) {
@@ -82,17 +82,17 @@ public class ModelImpl implements IModel {
         return actorsCRUD.read(null);
     }
 
-    public void updateActor(Actors oldUser, Actors newUser) {
-        actorsCRUD.update(oldUser, newUser);
+    public boolean updateActor(Actors oldUser, Actors newUser) {
+        return actorsCRUD.update(oldUser, newUser);
     }
 
-    public void deleteActor(Actors deleteUser) {
-        actorsCRUD.delete(deleteUser);
+    public boolean deleteActor(Actors deleteUser) {
+        return actorsCRUD.delete(deleteUser);
     }
 
     // MOVIES TABLE
-    public void createMovie(Movies newMovie) {
-        moviesCRUD.create(newMovie);
+    public boolean createMovie(Movies newMovie) {
+        return moviesCRUD.create(newMovie);
     }
 
     public List<Movies> fetchMovie(String query) {
@@ -103,17 +103,17 @@ public class ModelImpl implements IModel {
         return moviesCRUD.read(null);
     }
 
-    public void updateMovie(Movies oldMovie, Movies newMovie) {
-        moviesCRUD.update(oldMovie, newMovie);
+    public boolean updateMovie(Movies oldMovie, Movies newMovie) {
+        return moviesCRUD.update(oldMovie, newMovie);
     }
 
-    public void deleteMovie(Movies deleteMovie) {
-        moviesCRUD.delete(deleteMovie);
+    public boolean deleteMovie(Movies deleteMovie) {
+        return moviesCRUD.delete(deleteMovie);
     }
 
     // MOVIESLIKE TABLE
-    public void createMovieLike(MovieLike newMovie) {
-        movieLikeCRUD.create(newMovie);
+    public boolean createMovieLike(MovieLike newMovie) {
+        return movieLikeCRUD.create(newMovie);
     }
 
     public List<MovieLike> fetchMovieLike(String query) {
@@ -124,17 +124,17 @@ public class ModelImpl implements IModel {
         return movieLikeCRUD.read(null);
     }
 
-    public void updateMovieLike(MovieLike oldMovie, MovieLike newMovie) {
-        movieLikeCRUD.update(oldMovie, newMovie);
+    public boolean updateMovieLike(MovieLike oldMovie, MovieLike newMovie) {
+        return movieLikeCRUD.update(oldMovie, newMovie);
     }
 
-    public void deleteMovieLike(MovieLike deleteMovie) {
-        movieLikeCRUD.delete(deleteMovie);
+    public boolean deleteMovieLike(MovieLike deleteMovie) {
+        return movieLikeCRUD.delete(deleteMovie);
     }
 
     // REVIEWS TABLE
-    public void createReview(Reviews newReview) {
-        reviewsCRUD.create(newReview);
+    public boolean createReview(Reviews newReview) {
+        return reviewsCRUD.create(newReview);
     }
 
     public List<Reviews> fetchReview(String query) {
@@ -145,17 +145,17 @@ public class ModelImpl implements IModel {
         return reviewsCRUD.read(null);
     }
 
-    public void updateReview(Reviews oldReview, Reviews newReview) {
-        reviewsCRUD.update(oldReview, newReview);
+    public boolean updateReview(Reviews oldReview, Reviews newReview) {
+        return reviewsCRUD.update(oldReview, newReview);
     }
 
-    public void deleteReview(Reviews deleteReview) {
-        reviewsCRUD.delete(deleteReview);
+    public boolean deleteReview(Reviews deleteReview) {
+        return reviewsCRUD.delete(deleteReview);
     }
 
     // REVIEWSLIKE TABLE
-    public void createReviewLike(ReviewLike newReview) {
-        reviewLikeCRUD.create(newReview);
+    public boolean createReviewLike(ReviewLike newReview) {
+        return reviewLikeCRUD.create(newReview);
     }
 
     public List<ReviewLike> fetchReviewLike(String query) {
@@ -166,12 +166,12 @@ public class ModelImpl implements IModel {
         return reviewLikeCRUD.read(null);
     }
 
-    public void updateReviewLike(ReviewLike oldReview, ReviewLike newReview) {
-        reviewLikeCRUD.update(oldReview, newReview);
+    public boolean updateReviewLike(ReviewLike oldReview, ReviewLike newReview) {
+        return reviewLikeCRUD.update(oldReview, newReview);
     }
 
-    public void deleteReviewLike(ReviewLike deleteReview) {
-        reviewLikeCRUD.delete(deleteReview);
+    public boolean deleteReviewLike(ReviewLike deleteReview) {
+        return reviewLikeCRUD.delete(deleteReview);
     }
 
     public static void main(String[] args) {
