@@ -12,8 +12,8 @@ public class UsersCRUD implements ICRUD<Users> {
 
     @Override
     public boolean create(Users newObject) {
-        String sql = String.format("INSERT INTO users (user_id, role, password, userName, is_verified) VALUES (%d,'%s','%s','%s',%b)",
-                newObject.getUser_id(), newObject.getRole(), newObject.getPassword(), newObject.getUserName(), newObject.isVerified());
+        String sql = String.format("INSERT INTO users (role, password, userName, is_verified) VALUES ('%s','%s','%s',%b)",
+                newObject.getRole(), newObject.getPassword(), newObject.getUserName(), newObject.isVerified());
         return SQLConnector.createRecord(sql);
     }
 
