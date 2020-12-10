@@ -26,7 +26,7 @@ public class ActorsModule extends AbstractModule implements IModule {
                 "| 4 - Update Actor    |\n" +
                 "| 5 - Delete Actor    |\n" +
                 "|                     |\n" +
-                "| * - Back            |\n" +
+                "| 0 - Back            |\n" +
                 "-----------------------";
 
         while(true) {
@@ -48,7 +48,7 @@ public class ActorsModule extends AbstractModule implements IModule {
                 case "5":
                     deleteActor();
                     return Module.ACTORS;
-                case "*":
+                case "0":
                     return Module.MOVIE_MAIN;
                 default:
                     view.echoOutput("Invalid Input. Enter valid input\n");

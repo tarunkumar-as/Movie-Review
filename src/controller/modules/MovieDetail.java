@@ -44,7 +44,7 @@ public class MovieDetail extends AbstractModule implements IModule {
                 "| 8 - Like the Review |\n" +
                 "| 9 - DisLike the Review\n" +
                 "|                     |\n" +
-                "| * - Back            |\n" +
+                "| 0 - Back            |\n" +
                 "-----------------------";
 
         while(true) {
@@ -78,7 +78,7 @@ public class MovieDetail extends AbstractModule implements IModule {
                 case "9":
                     dislikeAReview();
                     return Module.MOVIE_DETAIL;
-                case "*":
+                case "0":
                     return Module.MOVIE_MAIN;
                 default:
                     view.echoOutput("Invalid Input. Enter valid input\n");
@@ -99,7 +99,7 @@ public class MovieDetail extends AbstractModule implements IModule {
                 "| 6 - Like the Review |\n" +
                 "| 7 - DisLike the Review\n" +
                 "|                     |\n" +
-                "| * - Back            |\n" +
+                "| 0 - Back            |\n" +
                 "-----------------------";
 
         while(true) {
@@ -127,7 +127,7 @@ public class MovieDetail extends AbstractModule implements IModule {
                 case "7":
                     dislikeAReview();
                     return Module.MOVIE_DETAIL;
-                case "*":
+                case "0":
                     return Module.MOVIE_MAIN;
                 default:
                     view.echoOutput("Invalid Input. Enter valid input\n");
@@ -147,7 +147,7 @@ public class MovieDetail extends AbstractModule implements IModule {
                 "| 5 - Like the Review |\n" +
                 "| 6 - DisLike the Review\n" +
                 "|                     |\n" +
-                "| * - Back            |\n" +
+                "| 0 - Back            |\n" +
                 "-----------------------";
 
         while(true) {
@@ -172,7 +172,7 @@ public class MovieDetail extends AbstractModule implements IModule {
                 case "6":
                     dislikeAReview();
                     return Module.MOVIE_DETAIL;
-                case "*":
+                case "0":
                     return Module.MOVIE_MAIN;
                 default:
                     view.echoOutput("Invalid Input. Enter valid input\n");

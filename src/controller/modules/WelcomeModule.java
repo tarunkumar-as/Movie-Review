@@ -23,7 +23,7 @@ public class WelcomeModule extends AbstractModule implements IModule {
                         "-----------------------\n" +
                         "| 1 - Sign Up         |\n" +
                         "| 2 - Login           |\n" +
-                        "| * - Quit            |\n" +
+                        "| Q - Quit            |\n" +
                         "-----------------------";
         view.echoOutput(welcomeText);
     }
@@ -37,7 +37,8 @@ public class WelcomeModule extends AbstractModule implements IModule {
                     return Module.SIGNUP;
                 case "2":
                     return Module.LOGIN;
-                case "*":
+                case "Q":
+                case "q":
                     view.echoOutput("Thank you \uD83D\uDE0A");
                     System.exit(0);
                 default:

@@ -38,7 +38,7 @@ public class UsersModule extends AbstractModule implements IModule {
                 "| 3 - Approve Users   |\n" +
                 "| 4 - View User Activity\n"+
                 "|                     |\n" +
-                "| * - Back            |\n" +
+                "| 0 - Back            |\n" +
                 "-----------------------";
 
         while(true) {
@@ -57,7 +57,7 @@ public class UsersModule extends AbstractModule implements IModule {
                 case "4":
                     viewUserActivity();
                     return Module.USERS_MAIN;
-                case "*":
+                case "0":
                     return Module.MAINMENU;
                 default:
                     view.echoOutput("Invalid Input. Enter valid input\n");
@@ -73,7 +73,7 @@ public class UsersModule extends AbstractModule implements IModule {
                         "| 1 - List all Critiques\n" +
                         "| 2 - View Critique Activity\n"+
                         "|                     |\n" +
-                        "| * - Back            |\n" +
+                        "| 0 - Back            |\n" +
                         "-----------------------";
 
         while(true) {
@@ -86,7 +86,7 @@ public class UsersModule extends AbstractModule implements IModule {
                 case "2":
                     viewUseCritiqueActivity();
                     return Module.USERS_MAIN;
-                case "*":
+                case "0":
                     return Module.MAINMENU;
                 default:
                     view.echoOutput("Invalid Input. Enter valid input\n");

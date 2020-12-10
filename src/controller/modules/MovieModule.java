@@ -42,7 +42,7 @@ public class MovieModule extends AbstractModule implements IModule {
                 "| 6 - Select Movie    |\n" +
                 "| 7 - Delete Movie    |\n" +
                 "|                     |\n" +
-                "| * - Back            |\n" +
+                "| 0 - Back            |\n" +
                 "-----------------------";
 
         while(true) {
@@ -68,7 +68,7 @@ public class MovieModule extends AbstractModule implements IModule {
                 case "7":
                     deleteMovie();
                     return Module.MOVIE_MAIN;
-                case "*":
+                case "0":
                     return Module.MAINMENU;
                 default:
                     view.echoOutput("Invalid Input. Enter valid input\n");
@@ -86,7 +86,7 @@ public class MovieModule extends AbstractModule implements IModule {
                 "| 3 - Filter Movies   |\n" +
                 "| 4 - Select Movie    |\n" +
                 "|                     |\n" +
-                "| * - Back            |\n" +
+                "| 0 - Back            |\n" +
                 "-----------------------";
 
         while(true) {
@@ -104,7 +104,7 @@ public class MovieModule extends AbstractModule implements IModule {
                     return Module.MOVIE_MAIN;
                 case "4":
                     return selectMovie();
-                case "*":
+                case "0":
                     return Module.MAINMENU;
                 default:
                     view.echoOutput("Invalid Input. Enter valid input\n");
@@ -122,7 +122,7 @@ public class MovieModule extends AbstractModule implements IModule {
                 "| 3 - Filter Movies   |\n" +
                 "| 4 - Select Movie    |\n" +
                 "|                     |\n" +
-                "| * - Back            |\n" +
+                "| 0 - Back            |\n" +
                 "-----------------------";
 
         while(true) {
@@ -140,7 +140,7 @@ public class MovieModule extends AbstractModule implements IModule {
                     return Module.MOVIE_MAIN;
                 case "4":
                     return selectMovie();
-                case "*":
+                case "0":
                     return Module.MAINMENU;
                 default:
                     view.echoOutput("Invalid Input. Enter valid input\n");
@@ -205,6 +205,8 @@ public class MovieModule extends AbstractModule implements IModule {
                 "-----------------------\n" +
                 "| Movies List         |\n" +
                 "-----------------------\n";
+        view.echoOutput(displayText);
+        displayText = "-----------------------\n";
 
         for (Movies movie : moviesList) {
             StringBuilder movieText = new StringBuilder("Movie Name : " + movie.getMovie_name() + "\n" +

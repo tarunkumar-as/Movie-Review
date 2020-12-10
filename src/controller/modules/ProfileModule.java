@@ -30,7 +30,7 @@ public class ProfileModule extends AbstractModule implements IModule {
                     "| 2 - Update Profile  |\n" +
                     "| X - Delete Account  |\n" +
                     "|                     |\n" +
-                    "| * - Back            |\n" +
+                    "| 0 - Back            |\n" +
                     "-----------------------";
             view.echoOutput(displayText);
             String input = view.getInput();
@@ -43,7 +43,7 @@ public class ProfileModule extends AbstractModule implements IModule {
                 case "X":
                 case "x":
                     return deleteAccount();
-                case "*":
+                case "0":
                     return Module.MAINMENU;
                 default:
                     view.echoOutput("Invalid Input. Enter valid input\n");
