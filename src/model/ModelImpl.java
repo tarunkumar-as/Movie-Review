@@ -174,9 +174,9 @@ public class ModelImpl {
         return reviewLikeCRUD.delete(deleteReview);
     }
 
-    public static void main(String[] args) {
-        ModelImpl impl = new ModelImpl();
-
+//    public static void main(String[] args) {
+//        ModelImpl impl = new ModelImpl();
+//
 //        Users users = new Users();
 //        users.setUserName("Tarun");
 //        users.setPassword("Tarun");
@@ -251,5 +251,5 @@ public class ModelImpl {
 //        impl.fetchAllMovieLikes();
 //        impl.updateMovieLike(movieLike, movieLike);
 //        impl.deleteMovieLike(movieLike);
-    }
+//    }
 }
