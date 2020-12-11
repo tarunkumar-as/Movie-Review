@@ -1,7 +1,7 @@
 # Movie-Review
 The movie review system is one of the widely used system in the current world. Before proceeding to watch a movie in the theatre or purchasing a movie on demand, viewers always check the movie’s rating, reviews from famous critiques to decide whether to proceed with the movie or not. This project implements a command line program for such a system that allows viewers to check the latest movies, its actors, ratings from other viewers and also reviews and comments from movie critiques.
 
-# SPECIFICATION
+## SPECIFICATION
 In order to the run the application in a system, we need the MySQL Workbench and Intellij IDE to run the java application if code needs to be modified and run with the modified code. Another way to run the application is to run the JAR file in the command line and access the application. 
 
 The above mentioned software can be downloaded from https://www.jetbrains.com/idea/download/#section=mac and
@@ -13,11 +13,11 @@ If we want to run the code in Intellij, we need to import the MySQL DB connector
 
 Once this has been setup, the username and password for the database connection created using the dump provided must be updated in SQLConnector.java file in the model package which is found inside the src folder. Doing so will help in establishing the connection between the database server and our java application using the JDBC connector library plugin.
 
-# HOW TO RUN
+## HOW TO RUN
 In order to the run the application go to MovieReview.java file and run the main function or run the Jar provided in the terminal command using the following command
 				java -jar Minecraft.jar
  
-# HOW TO USE
+## HOW TO USE
 Run the provided SQL dump in MySQLWorkbench by using the import wizard. This will setup the base database structure that will be used for our application.
 When the MySQLWorkbench is running run the application in the terminal and we can star using the application.
 
@@ -31,7 +31,7 @@ The database consists of 8 tables –
 •	Review_like: Contains the upvotes or downvotes for a review posted by a critique
 •	Movie_like: Contains the upvotes or downvotes for a movie posted by a critique
 
-# Program Flow
+## Program Flow
 
 Admin Role:
 •	Once an admin signs into the application he/she will be provided with a menu having the list of features that are possible for the admin. These features include Movie, Users, Profile. 
