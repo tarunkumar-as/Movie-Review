@@ -33,21 +33,21 @@ The database consists of 8 tables –
 
 ## Program Flow
 
-Admin Role:
+###Admin Role:
 •	Once an admin signs into the application he/she will be provided with a menu having the list of features that are possible for the admin. These features include Movie, Users, Profile. 
 o	If the Movie option is selected, the admin can view the list of movies, add movie to the list, remove movie to the list, search for a movie or filter the movies list based on a list of options or select a movie and views it features.
 o	If a movie is selected to view its feature, then the details of the movie can be viewed or updated, add a review, view a review or delete a review that is posted to the movie
 •	If the Users option is selected then the admin has the option to view the list of users that are using the application, remove a user from the application, approve a newly signed up user, view the user activity for a selected user.
 •	In the profile section, the user can update their details such as name, photo, phone and password.
 
-Movie Critique Role:
+###Movie Critique Role:
 •	Once a movie critique signs into the application he/she will be provided with a menu having the list of features that are possible for the admin. These features include Movie, Users, Profile. 
 o	If the Movie option is selected, the critique can view the list of movies, search for a movie or filter the movies list based on a list of options or select a movie and views it features.
 o	If a movie is selected to view its feature, then the details of the movie can be viewed, add a review view or delete a review that has been posted by the user to the movie
 •	If the Users option is selected, then the critique has the option to view the list of fellow movie critiques and their activity.
 •	In the profile section, the user can update their details such as name, photo, phone and password and request for a role change to either admin or user. If requested for an admin role change then the profile verification must again be performed
 
-Viewer Role:
+###Viewer Role:
 •	Once a viewer signs into the application he/she will be provided with a menu having the list of features that are possible for the admin. These features include Movie and Profile. 
 o	If the Movie option is selected, the viewer can view the list of movies, search for a movie or filter the movies list based on a list of options or select a movie and views it features.
 o	If a movie is selected to view its feature, then the details of the movie can be viewed, view the reviews of the movie, upvote or downvote the movie or upvote or downvote a review posted by the critique
